@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Trips" %>
+
+<h1>Trips</h1>
+<p>prete pour laventure, il y a un detecteur de langue dans ce formulaire, parle la langue que tu veux dans ce formulaire, pour pouvoir partir dans la destination que tu choisis avec ce job.</p>
+
+<div id="trips">
+  <% @trips.each do |trip| %>
+    <%= render trip %>
+    <p>
+      <%= link_to "Show this trip", trip %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New trip", new_trip_path %>

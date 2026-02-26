@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Souvenirs" %>
+
+<h1>Souvenirs</h1>
+<p>si tu es tres sportif-ve ou voyageu-se, peux tu te rappeler des animaux, bds, montagnes ou tu es allée en voyage, trouver une image pour les lister ici., endroits où tu partie en séjour de sport, etc.</p>
+
+<div id="souvenirs">
+  <% @souvenirs.each do |souvenir| %>
+    <%= render souvenir %>
+    <p>
+      <%= link_to "Show this souvenir", souvenir %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New souvenir", new_souvenir_path %>
